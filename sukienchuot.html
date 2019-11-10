@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <img src="mouse.jpg" alt="thanhdao" id="thanh" style="height: 400px;width: 300px;">
+        <p>ấn vào nút dưới</p>
+        <input type="button" value="clickme" onclick="moveRight();"/>
+
+    </form>
+    <script>
+        var imgobj= null;
+        var imgobj=document.getElementById('thanh');
+        function init(){
+            imgobj=document.getElementById('thanh');
+            imgobj.style.position= 'relative';
+            imgobj.style.left= '0px';
+
+        }
+        function moveRight(){
+            imgobj.style.left=parseInt(imgobj.style.left) + 10 + 'px';
+
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
